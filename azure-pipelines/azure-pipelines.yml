@@ -7,7 +7,10 @@ trigger:
 - azure
 
 pool:
-  vmImage: ubuntu-latest
+#  vmImage: ubuntu-latest
+  name: Default
+  demands:
+   - agent.name -equals LLENADO2
 
 steps:
 - task: Maven@3
